@@ -191,6 +191,24 @@ Outputs:
         Value: !Ref VPC
         Export:
           Name: !Sub ${EnvironmentName}-VPCID
+    
+    VPCPublicRouteTable: 
+        Description: Public Routing
+        Value: !Ref PublicRouteTable
+        Export:
+          Name: !Sub ${EnvironmentName}-PUB-RT
+
+    VPCPrivateRouteTable1: 
+        Description: Private routing AZ1
+        Value: !Ref PrivateRouteTable1
+        Export:
+          Name: !Sub ${EnvironmentName}-PRI1-RT
+
+    VPCPrivateRouteTable2: 
+        Description: Private routing AZ2
+        Value: !Ref PrivateRouteTable2
+        Export:
+          Name: !Sub ${EnvironmentName}-PRI2-RT
 
     PublicSubnets:
         Description: A list of the public subnets
